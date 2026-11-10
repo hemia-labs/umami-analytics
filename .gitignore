@@ -1,0 +1,19 @@
+# Secretos: nunca al repo
+.env
+CREDENCIALES.txt
+*.pem
+*.key
+
+# Respaldos de la base
+backups/
+*.sql
+*.sql.gz
+
+# Varios
+*.log
+.DS_Store
+Thumbs.db
+
+# Paquetes de transferencia
+*.tgz
+*.tar.gz

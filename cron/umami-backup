@@ -1,0 +1,1 @@
+15 9 * * * root /opt/umami/backup.sh >> /var/log/umami-backup.log 2>&1
