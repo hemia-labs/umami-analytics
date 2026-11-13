@@ -84,4 +84,4 @@ Antes de actualizar a una versión mayor, haz un respaldo manual y revisa las no
 
 - Borrar el registro DNS `analytics` de `medsync.mx`. El bloque `if ($host = analytics.medsync.mx)` del puerto 80 lo dejó certbot y ya no se usa; se puede quitar del vhost.
 - `docker-compose.yml` usa la imagen `umami:latest`, así que un `docker compose pull` puede saltar a una versión mayor sin aviso. Conviene fijar la versión (por ejemplo `umami:3.4.1`) y subirla a mano después de un respaldo.
-- Seguridad del VPS (fuera de este repo): ufw permite desde cualquier IP los puertos 3306, 5432, 6379 y 5672. Se recomienda restringirlos.
+- ~~Seguridad del VPS: ufw permitía desde cualquier IP los puertos 3306, 5432, 6379 y 5672.~~ Resuelto el 2026-11-12: se cerraron en ufw, y RabbitMQ se recreó publicando solo en 127.0.0.1. Ver `docs/platform-operations/phases/PHASE_TEST_VPS_PORT_HARDENING_20261112.md` en HemiaAssistantGlobal.
